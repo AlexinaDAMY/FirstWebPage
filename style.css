@@ -1,0 +1,214 @@
+
+/* BANNER ON THE TOP */
+
+header {
+  background: #111; 
+  }
+
+.headline {
+  position: relative;
+  opacity: 1;
+  height: 250px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: url('Baniere.webp') no-repeat center center;
+  background-size: cover;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#111, 0.5);
+  }
+  }
+
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(-50%) translateY(-50%);
+  h1 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 1.2em;
+  }
+  p {
+    margin: 0;
+    font-size: 1.4em;
+    font-style: italic;
+  }
+  }
+
+
+.banniere {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.scrolled {
+  background: rgba(#140f0f);
+  opacity: 0.75;
+  display: block;
+  z-index: 0;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+}
+  
+
+.logo{
+  height: 75px;
+  float: left;
+  &:before, &:after {
+    position: absolute;
+    font-size: 7em;
+    font-weight: 300;
+    line-height: 0;
+    color: #fff;
+    top: 25px;
+  }
+  &:before {
+    content: '\00BB';
+    left: 20px;
+  }
+  &:after {
+    content: '\00AB';
+    left: 34px;
+  }
+  }
+
+  section {
+    width: 100%;
+    margin: 25px auto;
+    padding: 20px;
+    max-width: 900px;
+    font-size: 1em;
+    line-height: 1.6em;
+    box-sizing: border-box;
+  }
+
+/*******************************************************************************************************************/
+/* PLANTS'RECORDS TABS */
+
+/* Style and behaviour */
+.tab {
+    overflow: hidden;
+    border: 1px solid #0d758f8d; 
+    background-color: #94def18d;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+/* Styles of tab's content, to hide it by default*/
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+
+
+/* Positions of records's text*/
+.reportInformations{
+    float: left;
+    margin-right: 5em;
+  }
+
+
+
+.logoPlante{
+  height: 60px;
+  float: left;
+  margin-right: 2em;
+}
+
+.reportTitle{
+  font-size: 1.2em;
+}
+
+.closeReport{
+  text-align: center;  
+}
+
+/*******************************************************************************************************************/
+/* BUTTONS */
+
+
+  /*------ Outside plants record's tabs*/
+
+button{
+  background-color: #fcffff;
+  border-radius: 10px;
+  border: rgb(2, 53, 29) solid 1px;
+  width: 190px;
+  padding: 5px;
+}
+
+button:hover{
+  background-color: #9d9090;
+}
+
+.activated{ 
+  opacity: 0.7;
+  background-color: #88858566;
+}
+
+  /*------ Plants record's tabs*/
+
+button.tablinks{ 
+  width: 140px;
+  border:#1c4b8d;
+}
+
+button.tablinks:hover{
+  background-color: #0d758f8d;
+  color: #fff;
+}
+
+.activated.tablinks{
+  background-color: #0d758f8d;
+  color: #fff;
+}
+
+/*******************************************************************************************************************/
+/* OTHER */
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.reportImage{
+  width: 190px;
+  height: 240px;
+}
+
+.sectionTitle{
+  font-size: 23px;
+  font-weight: 600;
+}
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td{
+  text-align: center;
+}
+
+.report{
+  display: none;
+}

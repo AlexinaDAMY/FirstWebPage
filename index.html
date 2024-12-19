@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>A si peu de trouver un titre intéressant. Dommage !</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+
+<!-- THE WEB PAGE CONTAIN -->
+
+    <body>
+
+<!-- //////////////////////////////////////////// -->
+<!-- Banner -->
+<!-- //////////////////////////////////////////// -->
+
+        <div class="banniere"><img class="logo" src="LogoTransparent.png" alt="Logo plante"/></div> <!--TODO : donner un fond transparent a l'image-->
+        <div class="headline">
+
+        <header class="inner">     
+           
+            <h1>Projet personnel</h1>
+            <br>
+            <p>Scroll pour découvrir une sélection de plantes ! </p>
+    
+        </header>
+        </div>
+
+<section>
+
+
+<!-- //////////////////////////////////////////// -->
+<!-- EXPLANATORY PART-->
+<!-- //////////////////////////////////////////// -->
+
+        <br><hr>
+        <p>Premier projet présentant des fiches d'informations et d'entretient de plantes. Les prochains objectifs sont : <br> 
+            - enrichir la page avec d'avantage de plantes<br>
+            - proposer une fonction de filtre sur la page (par exemple rechercher les plantes qui on besoin d'être arrosées une fois toutes les deux semaines ou moins en hiver)<br>
+        </p>
+
+
+
+<!-- //////////////////////////////////////////// -->
+<!-- Plants gallery with "more data" button-->
+<!-- //////////////////////////////////////////// -->
+        
+        <hr><br>
+        <p class="sectionTitle">Galerie des plantes : <p>
+            
+            <table>
+                <tr>
+                    <td><strong>Phalangère</strong></td>
+                    <td><strong>Spathiphyllum</strong></td>
+                    <td><strong>Yucca</strong></td>
+                </tr>
+                <tr>
+                    <td> <img src="BasePictures/Chlorophytum.jpg" class="reportImage" alt="Photographie d'une Phalangère"/> </td>
+                    <td> <img src="BasePictures/Spathiphyllum.jpg" class="reportImage" alt="Photographie d'un Spathiphyllum"/> </td>
+                    <td> <img src="BasePictures/YuccaInterieure.jpg" class="reportImage" alt="Photographie d'un Yucca à trois branches"/> </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td><button id="printPhalangèreReport" onclick="openReport('PhalangereReport','phalangereGeneralTabOpen','printPhalangèreReport')">Plus d'informations</button></td>
+                    <td><button id="printSpathiphyllumReport" onclick="openReport('SpathiphyllumReport','spathiphyllumGeneralTabOpen','printSpathiphyllumReport')">Plus d'informations</button></td>
+                    <td><button id="printYuccaReport" onclick="openReport('YuccaReport','yuccaGeneralTabOpen','printYuccaReport')">Plus d'informations</button></td>
+                </tr>
+            </table>
+            
+<br>
+
+<!-- //////////////////////////////////////////// -->
+<!-- Plants records -->
+<!-- //////////////////////////////////////////// -->
+
+
+<!------------ PHALANGERE RECORD ---------------->
+
+<div class="report" id="PhalangereReport">
+<img class="logoPlante" src="LogoFichePlante.png" /> 
+<div class="reportTitle"><strong>Phalangère</strong></div>
+    
+    <div>
+     
+    
+        <div class="tab">
+        <button class="tablinks phalangere" id="phalangereGeneralTabOpen" onclick="informationType(event,'generalPhalangere','phalangere')">Généralités</button>
+        <button class="tablinks phalangere" onclick="informationType(event, 'entretientPhalangere','phalangere')">Entretient - Facile</button>
+        <button class="tablinks phalangere" onclick="informationType(event, 'remarquePhalangere','phalangere')">Remarque</button>
+        </div>
+                  
+        <!-- Tabs data -->
+        <div id="generalPhalangere" class="tabcontent phalangere">
+            <ul>
+                <li><strong>Autre(s) nom(s) :</strong><it>Chlorophytum</it>, plante araignée</li>
+                <li>Habitat naturel : Afrique du Sud</li>
+                <li>Type de plante : plante verte à la végétation dite vivace</li>
+                <li>Floraison : de mai à juillet</li>
+                <li>Hauteur : 50 cm en intérieur</li>
+            </ul>
+            <button class="closeReport" onclick="closeReport('PhalangereReport','printPhalangèreReport')">Fermer la fiche</button>
+        </div>
+                  
+        <div id="entretientPhalangere" class="tabcontent phalangere">
+            <ul>
+                <li>Arrossage : Eté - 2 fois par semaine (au delà de 20°C brumiser les feuilles). Hiver - 1 fois par semaine voir moins si la pièce est fraiche.</li>
+                <li>Exposition lumineuse : très importante mais sans lumière directe</li>
+                <li>Température idéale: 15 - 24°C</li>
+                <li>Rempotage : tous les ans au printemps</li>
+                
+            </ul>
+            <button class="closeReport" onclick="closeReport('PhalangereReport','printPhalangèreReport')">Fermer la fiche</button>
+        </div>
+                  
+        <div id="remarquePhalangere" class="tabcontent phalangere">
+            Pour éviter que les feuilles s'assèchent, il est conseillé de brumiser les feuilles avec de l'eau non calcaire et de supprimer celles qui sont mortes et fanées au fur et à mesure, en ne coupant que la partie abimée et en laissant la partie saine.
+            <br><br><button class="closeReport" onclick="closeReport('PhalangereReport','printPhalangèreReport')">Fermer la fiche</button>
+        </div>
+    
+    </div> </div>
+
+<br>
+
+
+<!------------ SPATHIPHYLLUM RECORD ---------------->
+
+<div class="report" id="SpathiphyllumReport">
+<img class="logoPlante" src="LogoFichePlante.png" /> 
+<div class="reportTitle"><strong>Spathiphyllum</strong></div>
+        
+    <div>
+         
+        
+        <div class="tab">
+        <button class="tablinks spathiphyllum" id="spathiphyllumGeneralTabOpen" onclick="informationType(event, 'generalSpathiphyllum', 'spathiphyllum')">Généralités</button>
+        <button class="tablinks spathiphyllum" onclick="informationType(event, 'entretientSpathiphyllum', 'spathiphyllum')">Entretient - Facile</button>
+        <button class="tablinks spathiphyllum" onclick="informationType(event, 'remarqueSpathiphyllum', 'spathiphyllum')">Remarque</button>
+        </div>
+                      
+        <!-- Tabs datas -->
+        <div id="generalSpathiphyllum" class="tabcontent spathiphyllum">
+            <ul>
+                <li><strong>Autre(s) nom(s) : fleur de lune, lys de la paix</strong></li>
+                <li>Habitat naturel : Amérique du Sud</li>
+                <li>Type de plante : plante verte au feuillage dit persistant</li>
+                <li>Floraison : toute l'année</li>
+                <li>Hauteur : jusqu'à 100 cm</li>
+            </ul>
+            <button class="closeReport" onclick="closeReport('SpathiphyllumReport','printSpathiphyllumReport')">Fermer la fiche</button>
+        </div>
+                      
+        <div id="entretientSpathiphyllum" class="tabcontent spathiphyllum">
+            <ul>
+                <li>Arrossage : Eté - 1 à 2 fois par semaine, brumiser les feuilles. Hiver - 1 fois toutes les 2 semaines.</li>
+                <li>Exposition lumineuse : importante mais sans lumière directe</li>
+                <li>Température idéale : 16 - 22°C</li>
+                <li>Rempotage : tous les 2 à 3 ans au printemps</li>
+                <br>
+            </ul>
+            <button class="closeReport" onclick="closeReport('SpathiphyllumReport','printSpathiphyllumReport')">Fermer la fiche</button>
+        </div>
+                      
+        <div id="remarqueSpathiphyllum" class="tabcontent spathiphyllum">
+            À tenir hors de portée de vos enfants et de vos animaux de compagnie car toxique.
+            <br><button class="closeReport" onclick="closeReport('SpathiphyllumReport','printSpathiphyllumReport')">Fermer la fiche</button>
+        </div>
+        
+    </div></div>
+
+<br>
+
+<!------------ YUCCA REPORT ---------------->
+
+<div class="report" id="YuccaReport">
+<img class="logoPlante" src="LogoFichePlante.png" /> 
+<div class="reportTitle"><strong>Yucca</strong></div>
+        
+    <div>
+         
+        
+        <div class="tab">
+        <button class="tablinks yucca" id="yuccaGeneralTabOpen" onclick="informationType(event, 'generalYucca','yucca')" id="defaultOpen">Généralités</button>
+        <button class="tablinks yucca" onclick="informationType(event, 'entretientYucca','yucca')">Entretient - Facile</button>
+        <button class="tablinks yucca" onclick="informationType(event, 'remarqueYucca','yucca')">Remarque</button>
+        </div>
+                      
+        <!-- Tabs datas -->
+        <div id="generalYucca" class="tabcontent yucca">
+            <ul>
+                <li><strong>Autre(s) nom(s) : dague espagnole</strong></li>
+                <li>Habitat naturel : Amérique</li>
+                <li>Type de plante : plante d'intérieur et d'extérieur</li>
+                <li>Floraison : dépend de l'espèce</li>
+                <li>Hauteur : 150 à 200 cm</li>
+            </ul>
+            <button class="closeReport" onclick="closeReport('YuccaReport','printYuccaReport')">Fermer la fiche</button>
+        </div>
+                      
+        <div id="entretientYucca" class="tabcontent yucca">
+            <ul>
+                <li>Arrossage : Eté - 1 fois par semaine. Hiver - 1 fois toutes les 3 semaines.</li>
+                <li>Exposition lumineuse : importante</li>
+                <li>Température idéale : au delà de 10°C</li>
+                <li>Rempotage : tous les ans au printemps</li>
+                <br>
+            </ul>
+            <button class="closeReport" onclick="closeReport('YuccaReport','printYuccaReport')">Fermer la fiche</button>
+        </div>
+                      
+        <div id="remarqueYucca" class="tabcontent yucca">
+            Il est conseillé de le placer au frais en hiver, lorsque l'exposition lumineuse est insufisante. De plus, c'est une plante à la vitesse de croissance lente !
+            <br><button class="closeReport" onclick="closeReport('YuccaReport','printYuccaReport')">Fermer la fiche</button>
+        </div>
+        
+    </div></div>
+
+
+</section>
+
+<script src="script.js"></script>
+
+    </body>
+
+</html>
